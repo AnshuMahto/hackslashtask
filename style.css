@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100;
+    width: 100%;
+    font-family: "Roboto Slab", serif;
+    background-color: #F0F8FF;
+    position: relative;
+}
+.dark{
+    background-color: #212529;
+    color: white;
+}
+
+#letcol {
+    width: 70vw;
+    margin: auto;
+    padding: 32px;
+    cursor: pointer;
+}
+
+#letcol h2 {
+    width: 75vw;
+    height: 3vw;
+    transition-duration: .1s;
+    transition-timing-function: linear;
+}
+
+#letcol h2:hover {
+    color: #a2a2a2;
+    transform: scale(1.02);
+    position: relative;
+    left: -8px;
+}
+
+#page1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: auto;
+}
+
+.left {
+    width: 34vw;
+    padding-top: 1vw;
+}
+
+.left h1 {
+    font-weight: 270;
+    font-size: 3.2vw;
+    line-height: 3.9vw;
+    position: relative;
+}
+
+.left h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -12px;
+    height: 0px;
+    border-radius: 9px;
+    width: 30vw;
+    background-color: #b8b8b8ce;
+    transition: 0.1s;
+    transition-timing-function: ease;
+}
+
+.left h1:hover::after {
+    height: 1px;
+}
+
+.left h1:hover {
+    transform: scale(1.05);
+}
+
+.descriptionbox {
+    padding-top: 4vw;
+    font-weight: 600;
+    font-size: 1.15vw;
+    width: 27vw;
+}
+
+.link {
+    padding-top: 3vw;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.link p {
+    font-weight: 800;
+    font-size: 1.3vw;
+}
+
+.link p:hover {
+
+    opacity: 0.5;
+}
+
+.right {
+    width: 34vw;
+    padding-top: 1vw;
+}
+
+.right img {
+    width: 34vw;
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+}
+
+.right img:hover {
+    transform: rotateY(180deg);
+}
+button{
+    margin-left: 17vw;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: .1s;
+    font-size: larger;
+
+}
+
+button:hover{
+    background-color: rgba(25, 25, 25, 0.672);
+}
+.hidden{
+    display: none;
+}
+.invert{
+    filter: invert(1);
+}
+
+@media (max-width:600px) {
+    .left h1 {
+        font-size: large;
+    }
+
+    #page1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .left {
+        width: 100%;
+        padding-top: 22vw;
+        text-align: center;
+    }
+    .left h1 {
+        font-weight: 400;
+        font-size:8vw;
+        line-height: 6vw;
+        position: relative;
+    }
+    .left h1::after {
+        content: "";
+        position: absolute;
+        bottom: -4vw;
+        height: 0px;
+        left: 8%;
+        width: 80%;
+        background-color: #6d6d6dce;
+        transition: 0.1s;
+        transition-timing-function: ease;
+    }
+    .descriptionbox {
+        padding-top: 8vw;
+        font-weight: 600;
+        font-size: 4.5vw;
+        width: 100%;
+    }
+    .link {
+        padding-top: 5vw;
+        display: flex;
+        gap: 7vw;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .link p {
+        font-weight: 800;
+        font-size: 6vw;
+        padding-left: 60px;
+    }
+    #letcol {
+        width: 100%;
+        margin: auto;
+        padding: 40px;
+        cursor: pointer;
+    }
+    .right {
+        width: 100%;
+        padding-top: 8vw;
+        padding-left: 3vw;
+        padding-bottom: 10px;
+    }
+    .right img {
+        width: 98%;
+        transition: all;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        margin: auto;
+    
+    }
+    .visible{
+        display: block;
+    }
+    .let{
+        display:none ;
+    }
+    button{
+        margin-left: 22vw;
+        margin-bottom: 30px;
+        margin-top: 26px;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 20px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        transition: .1s;
+        font-size: larger;
+    
+    }
+    
+}
